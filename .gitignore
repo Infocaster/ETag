@@ -1,0 +1,11 @@
+.svn
+*.suo
+*.user
+bin
+obj
+roadmap.txt
+TODO.txt
+/.vs
+/artifacts
+/packages
+TestResults
