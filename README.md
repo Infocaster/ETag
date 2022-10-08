@@ -48,6 +48,40 @@ You can use the ETag package in two different ways:
 
 Do not use both methods at the same time
 
+### Customizing the ETag
+You'll likely need to customize the creation of ETags before it works as expected. In order to do that, you should implement your own `IETagFactory` like this:
+```csharp
+public MyCustomETagFactory : IETagFactory
+{
+    public string Create(IPublishedRequest request)
+    {
+        /* Here you might want to:
+         *  - Include the update date of your layout model
+         *  - Precalculate any related content and include their update dates
+         *  - Include any update dates of other dependencies
+         *
+         * A good way to implement this class for many different document types is by using a strategy pattern:
+         * https://refactoring.guru/design-patterns/strategy
+         */
+        string result = // ... Your calculation to calculate your etag
+
+        return result;
+    }
+}
+```
+
+Then to overwrite the default implementation, you can create a composer:
+```csharp
+[ComposeAfter(typeof(Infocaster.Umbraco.ETag.ETagComposer))]
+public MyCustomETagComposer : IComposer
+{
+    public void Compose(IUmbracoBuilder builder)
+    {
+        builder.Services.AddUnique<IETagFactory, MyCustomETagFactory>();
+    }
+}
+```
+
 ## Contributing
 This package is open for contributions. If you want to contribute to the source code, please check out our [guide to contributing](/docs/CONTRIBUTING.md).  
 These people have already contributed to this awesome project:
