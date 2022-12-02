@@ -1,0 +1,24 @@
+{
+    "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+    "Title": "Umbraco ETag",
+    "Category": "Developer Tools",
+    "PackageType": "Package",
+    "Tags": [
+        "etag",
+        "caching",
+        "performance",
+        "browser",
+        "header"
+    ],
+    "LicenseTypes": ["Free"],
+    "AuthorDetails": {
+        "Url": "https://infocaster.net",
+        "ImageUrl": "https://github.com/InfocasterTechniek.png",
+        "Description": "Let's make the internet brighter",
+        "Contributors": [
+            "Dennis Heutinck"
+        ]
+    },
+    "IssueTrackerUrl": "https://github.com/Infocaster/ETag/issues",
+    "DiscussionForumUrl": "https://github.com/Infocaster/ETag/discussions"
+}

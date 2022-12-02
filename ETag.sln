@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6F53DA1C-4F0
 		src\Directory.Build.targets = src\Directory.Build.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infocaster.Umbraco.ETag", "src\Infocaster.Umbraco.ETag\Infocaster.Umbraco.ETag.csproj", "{AD890835-59E6-469F-BD80-59EB24419F0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infocaster.Umbraco.ETag", "src\Infocaster.Umbraco.ETag\Infocaster.Umbraco.ETag.csproj", "{AD890835-59E6-469F-BD80-59EB24419F0B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CFAA1064-A115-42C6-866D-AF08CA1035C3}"
 	ProjectSection(SolutionItems) = preProject
@@ -28,6 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README-NUGET.md = README-NUGET.md
 		README.md = README.md
 		readme.txt = readme.txt
+		umbraco-marketplace.json = umbraco-marketplace.json
 	EndProjectSection
 EndProject
 Global
