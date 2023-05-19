@@ -49,7 +49,13 @@ You can use the ETag package in two different ways:
 Do not use both methods at the same time
 
 ### Customizing the ETag
-You'll likely need to customize the creation of ETags before it works as expected. In order to do that, you should implement your own `IETagFactory` like this:
+By default, the ETag is calculated with the following data:
+ - The last update date of the current page
+ - The last update date of the current page's template
+ - The last update date of every ancestor of the current page
+ - The current hour (that is: the ETag changes at least once every hour)
+
+If you use related content or content pickers in your page, then you'll likely need to customize the creation of ETags before it works as expected. In order to do that, you should implement your own `IETagFactory` like this:
 ```csharp
 public MyCustomETagFactory : IETagFactory
 {
