@@ -1,13 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageTags>umbraco plugin package etag caching performance umbraco-marketplace</PackageTags>
-	  <Description>
+    <Description>
 		  Use ETags to boost your performance. This package enables you to use etags on your Umbraco content with ease.
 		  Once installed, you can generate ETags any way you want, by implementing a single class. The package will make sure that your ETags are properly applied.
 	  </Description>
-    <PackageReleaseNotes>1 change
+    <PackageReleaseNotes>2 changes
 
-- Update to Umbraco 11</PackageReleaseNotes>
+- Update the standard ETag algorithm
+- Add a proper description to the NuGet package</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.0.2" />
